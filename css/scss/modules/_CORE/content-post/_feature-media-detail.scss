@@ -1,0 +1,117 @@
+.feature-media-detail {
+  .post-wrap {
+    flex-flow: column;
+  }
+  
+  .post-content,
+  .post-media {
+    flex: 1 0 auto;
+    width: 100%;  
+  }
+    
+  // Post Content
+  .post-content {
+    margin-bottom: 1em;  
+  }
+    
+  // Post Media
+  .post-media {
+    padding-right: 0;
+    padding-left: 0;   
+    .content-post {
+      padding-top: 0;
+      &:nth-last-child(n+3), 
+      &:nth-last-child(n+3) ~ * {	 
+        padding-bottom: 2em;
+      }  
+    }
+    .post-content {
+      order: 2;
+      margin-bottom: 0;
+      .contact-info {
+        padding-bottom: 0;  
+      } 
+    }
+    .post-media {
+      order: 1;
+      margin-bottom: 1em;
+      padding: 0;  
+    }
+  }
+  
+  // Embedded Map
+  .map-embed {
+  	padding-bottom: 50%; 	
+  }
+  
+  // Social Media Icons
+  .soc-media-icons {
+    p {
+      font-size: .875em;
+      padding-right: 0;
+      padding-bottom: .5em;    
+      width: 100%;  
+    }
+  }
+  
+  // > 480
+  @media (min-width: $break-sm-phone) {
+    .button-group {
+      &[data-minwidth~="300"] {
+        flex-flow: row wrap;
+        [class^="btn-"] {
+          margin-left: 0;
+          margin-right: 0.5em;   
+          width: auto;        
+        }   
+      }
+    }
+  }
+  
+  // > 540
+  @media (min-width: $break-md-phone) {    
+    .post-media {  
+      .content-post {         
+        width: 49%;
+        &:nth-child(odd) {
+          padding-right: 2%; 
+        }
+        &:nth-child(even) {
+          padding-left: 2%;
+        }
+        &:nth-last-child(n+3), 
+        &:nth-last-child(n+3) ~ * {
+          &:last-child,
+          &:nth-last-child(2) {
+            padding-bottom: 0;  
+          }
+        }  
+      }
+      .post-content {
+        width: 100%;    
+      }
+      .post-media {
+        width: 100%;  
+      }
+    }
+  }
+  // > 667
+  @media (min-width: $break-ml-phone) {   
+    .post-media {
+      padding-left: 0;  
+    }
+  }
+  // 900
+  @media (min-width: $break-lg-phone) {
+    .post-wrap {
+      flex-flow: row wrap;
+    }
+    .post-content {    
+      width: 40%;  
+    }
+    .post-media {
+      padding-left: 4%; 
+      width: 60%;
+    }
+  }   
+}

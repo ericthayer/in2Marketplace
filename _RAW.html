@@ -1,0 +1,137 @@
+<!-- Data List -->
+<ul class="data-list text-center p-0 w-100 hidden">
+  <li class="flex flex-d-col ai-center sm-flex-d-row sm-jc-around p-tiny">Short Code List<span class="button-group"><a href="#"><svg class="icon"><use xlink:href="#icon-plus" /></svg> <span class="sr-only">Add SMS Capacity</span></a><a href="#"><svg class="icon"><use xlink:href="#icon-plus" /></svg> <span class="sr-only">Delete SMS Capacity</span></a><a href="#"><svg class="icon"><use xlink:href="#icon-minus" /></svg><span class="sr-only">Edit SMS Capacity</span></a></span></li>
+  </ul>
+  
+  <div class="button-group flex-grid"><a class="btn" href="#">Add <svg class="icon mr-ml-0"><use xlink:href="#icon-plus" /></svg></a><a class="btn" href="#">Retire <svg class="icon mr-ml-0"><use xlink:href="#icon-minus" /></svg></a><a class="btn" href="#">Edit <svg class="icon mr-ml-0  "><use xlink:href="#icon-pencil" /></svg></a></div> 
+  
+      <script>
+        $('#load-capacity').on('click', function() {
+        		$('#content-capacity').load('media-grid.html');
+        		$('#content-addons').unload('index.html');
+        		$(this).parent().find('button').removeClass('active');
+        		$(this).addClass('active');
+        		$('#content-capacity').show();
+        		$('#content-addons').hide();
+        });
+        
+        $('#load-addons').on('click', function() {
+        		$('#content-addons').load('index.html');
+        		$('#content-capacity').unload('media-grid.html');
+        		$(this).parent().find('button').removeClass('active');
+        		$(this).addClass('active');
+        		$('#content-addons').show();
+        		$('#content-capacity').hide();
+        });
+        
+      </script>
+      
+                
+          <section class="mod-block table-wrap pb-2 hidden">
+            <div class="container">
+              <div class="text-block text-center mb-2">
+                <h2 id="capacity" class="mb-tiny">Setup Capacity</h2>
+                <p>Super Admin capacity setup.</p>
+              </div>
+              <!-- MNO List -->      
+              <table class="tablesaw" data-tablesaw-mode="stack">
+                <thead>
+                  <tr>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">MNO</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3">SMS</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">Phone</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1"><abbr title="Team Name">Team Name</abbr></th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4"><a href="#">manage</a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="title"><a href="#">Name</a></td>
+                    <td>000000</td>
+                    <td>2009</td>
+                    <td>83%</td>
+                    <td>
+                      <span class="button-group">
+                        <a href="#">
+                          <svg class="icon mr-ml-0">
+                            <use xlink:href="#icon-plus" />
+                          </svg>
+                          <span class="sr-only">Add SMS Capacity</span>
+                        </a>
+                        <a href="#">
+                          <svg class="icon mr-ml-0">
+                            <use xlink:href="#icon-plus" />
+                          </svg>
+                          <span class="sr-only">Delete SMS Capacity</span>
+                        </a>
+                        <a href="#">
+                          <svg class="icon mr-ml-0  ">
+                            <use xlink:href="#icon-pencil" />
+                          </svg>
+                          <span class="sr-only">Edit SMS Capacity</span>
+                        </a>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          
+          <!-- Setup Screens -->
+          <section class="mod-block pt-pb-2 hidden">
+            <div class="container">
+            </div>
+          </section>
+          <!-- Setup Screens -->
+          <section class="mod-block pt-pb-2 hidden">
+            <div class="container">
+              <h2 class="text-center">Setup Screens</h2>
+              <p class="sm-pr-pl-3 mb-2 text-center sub-header">Click the buttons to display content.</p>
+              <!-- .load() buttons -->    		
+              <div class="button-group load-buttons">
+                <div class="container flex-layout">
+                  <button id="load-capacity" class="btn active">Capacity</button>    
+                  <button id="load-addons" class="btn">Addons</button>
+                </div>
+              </div>
+              <!-- content -->
+              <div id="load-content">
+                <!-- Capacity -->
+                <div id="content-capacity" style="display: none;"></div>
+                <!--Addons -->
+                <div id="content-addons" style="display: none;"></div>
+              </div>
+            </div>
+          </section>
+  
+  
+  
+  <div class="icon-group"><a href="#"><svg class="icon mr-ml-0"><use xlink:href="#icon-plus" /></svg> <span class="sr-only">Add SMS Capacity</span></a><a href="#"><svg class="icon mr-ml-0"><use xlink:href="#icon-minus" /></svg> <span class="sr-only">Delete SMS Capacity</span></a><a href="#"><svg class="icon mr-ml-0  "><use xlink:href="#icon-pencil" /></svg><span class="sr-only">Edit SMS Capacity</span></a></div>              
+     
+  
+  
+  <table class="tablesaw pr-pl-2 mw-5em" data-tablesaw-mode="stack">
+        			<thead>
+        				<tr>
+        					<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">MNO</th>
+        					<th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3">SMS</th>
+        					<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">Phone</th>
+        					<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1"><abbr title="Team Name">Team Name</abbr></th>
+        					<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4"><a href="#">manage</a></th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td class="title"><a href="#">Name</a></td>
+        					<td>000000</td>
+        					<td>2009</td>
+        					<td>83%</td>
+        					<td><span class="button-group"><a href="#"><svg class="icon mr-ml-0"><use xlink:href="#icon-plus" /></svg> <span class="sr-only">Add SMS Capacity</span></a><a href="#"><svg class="icon mr-ml-0"><use xlink:href="#icon-plus" /></svg> <span class="sr-only">Delete SMS Capacity</span></a><a href="#"><svg class="icon mr-ml-0  "><use xlink:href="#icon-pencil" /></svg><span class="sr-only">Edit SMS Capacity</span></a></span></td>
+        				</tr>
+        			</tbody>
+        		</table>
+    		
+    		
+    		
+    		

@@ -1,0 +1,161 @@
+.testimonial-block {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  flex-grow: 1;
+  font-size: 1em;
+  overflow-y: auto;
+  margin-right: auto;
+  margin-left: auto;    
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  text-align: center;
+  width: 100%;  
+  &:before {
+    content: '300 450 540';
+    display: none;
+  }
+  &[data-minwidth~="300"] {
+    //font-size: 1.25em;  
+  }
+  &[data-minwidth~="450"] {
+    //font-size: 1.4em;  
+  }
+  &[data-minwidth~="540"] {
+    //font-size: 1.6em;
+    padding-top: 3.5em;
+    padding-bottom: 3.5em;    
+  }
+  // > 1200
+  @media (min-width: $break-lg-screen) {
+    &[data-minwidth~="300"] {
+       
+    }
+  }
+}
+
+
+// Testimonial Image
+
+.testimonial-img {  
+  margin-bottom: 0.5em;     
+  figure {
+    height: 150px;  
+    width: 150px; 
+    position: relative;
+    // 667
+    @media (min-width: $break-ml-phone) {
+      [data-minwidth~="450"] & {
+        height: 200px;  
+        width: 200px;
+        // For Circle Image Style
+        &.circle-mask {
+           height: 200px;
+           width: 200px; 
+        }
+      }       
+    } 
+  }
+  &:empty {
+    display: none;  
+  }  
+}
+
+// Testimonial Quote
+
+.testimonial-quote {
+  font: {
+     style: italic;
+     size: 1em;
+  }
+  line-height: 1.3;
+  margin: 0 auto;
+  max-width: 30em;
+  overflow: visible;
+  position: relative;
+  text-rendering: optimizeLegibility; 
+  -webkit-font-smoothing: antialiased;  
+  span {
+    position: relative;
+    z-index: 1;  
+  }
+  // When used in Feature Posts
+  .feature-posts & {
+    padding-right: 0;
+    padding-left: 0;  
+  }
+  // When at least parent is 300px wide
+  [data-minwidth~="300"] & {
+      
+  }
+  // > 480
+  @media (min-width: $break-sm-phone) {
+    [data-minwidth~="300"] & {
+      .icon-quote-right {
+        position: relative;
+        right: 0;  
+        bottom: -5px;
+      } 
+    }
+  }
+  // > 667
+  @media (min-width: $break-ml-phone) {
+    [data-minwidth~="300"] & {
+      padding-right: 1.5em;
+      padding-left: 1.5em;
+      .feature-posts & {
+        padding-right: 0;
+        padding-left: 0;  
+      }
+    }
+  } 
+}
+
+
+// Quote Reference
+
+.testimonial-block {
+  .quote-ref {
+    border: none;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;  
+    font-size: 0.75em;
+    margin-bottom: 0;
+    padding-top: 1em;
+    text-align: center;  
+    width: auto;    
+    a {
+      color: #444;
+      &:hover {
+        
+      }
+    }
+    span {
+        height: 0.25em; 
+    }
+    .icon-divider {
+      &:before {
+        content: "";   
+      }
+    }
+  }
+  // 400
+  @media (min-width: 400px) {
+    // & at least 450px wide
+    &[data-minwidth~="300"] {    
+      .quote-ref {
+        span {
+          display: inline;  
+        }
+        .icon-divider {
+          &:before {
+            content: " ~ ";   
+          }
+        }
+      }
+    }
+  } 
+}

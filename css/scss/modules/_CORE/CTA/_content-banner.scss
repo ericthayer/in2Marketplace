@@ -1,0 +1,190 @@
+@mixin content-banner {
+  
+  .post-wrap {
+    align-items: center;
+  }
+  
+  // Banner Content
+  
+  .post-content {
+    //margin-bottom: 0; 
+  }
+  
+  // Banner Media
+
+  .post-media {  
+    figure {
+      //margin-bottom: 0; 
+    }
+  }
+  
+  // Banner Title
+  
+  .post-title {
+    //line-height: 1; 
+  }
+  
+  // Banner Subtitle
+  
+  .post-subtitle {
+    
+  }
+  
+  // Banner Text
+  
+  .post-text {
+    padding-bottom: 0;  
+    a {
+      //text-decoration: none;  
+    }
+    ul {
+      padding-left: 0;    
+    } 
+  }
+  
+  // > 540 & < 667
+  @media (min-width: $break-md-phone) and (max-width: $break-ml-phone) {
+    
+    .container {
+      padding-top: 2.5em; 
+      padding-bottom: 2.5em;  
+    }
+    
+    .post-text {
+      padding-bottom: 2em; 
+    }
+    
+  }
+  
+  // > 540
+  @media (min-width: $break-md-phone) {
+    
+    .post-media {
+      margin-bottom: 0; 
+    }
+    
+  }
+  
+  // > 667
+  @media (min-width: $break-ml-phone) {
+  
+    .post-text {
+      padding-bottom: 0;  
+    }
+    
+  }
+  
+  // > 992
+  @media (min-width: $break-md-screen) {
+    
+    .container {
+      padding-top: 3em;
+      padding-bottom: 3em;   
+    }
+    
+  }
+  
+}
+
+.content-banner {
+  @include content-banner;
+}
+  
+// w/ Media Elements 
+ 
+.content-banner-media {
+  @include content-banner; 
+  .post-content {
+    margin-bottom: 1.45em; 
+  }
+}
+
+// CTA Text - two col feature text
+  
+.content-banner-cta-text { 
+  // Banner Content
+  .post-content {
+    padding-bottom: 0;  
+  }
+  // Banner Title
+  .post-title {
+    padding-top: 0;   
+  }
+  // Banner Media
+  .post-media {
+  }
+  // Banner Text
+  .post-text {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      &:first-child {
+        padding-top: 0;  
+      }
+    }
+  }
+} 
+  
+// ******* BREAKPOINTS ******* //
+
+
+
+// 667
+@media (min-width: $break-ml-phone) {
+
+  
+  // Content Banner CTA Text
+  
+  .content-banner-cta-text {
+    .post-content {
+      padding-right: 5%;     
+      width: 48%;
+    }
+    .post-media {
+      width: 50%; 
+    }
+    .button-group {
+      padding-top: 1em;  
+    }    
+  }
+  
+  // Content Banner Media
+  
+  .content-banner-media {
+    .post-content {
+      margin-bottom: 0; 
+      padding-right: 5%;  
+      width: 60%; 
+    }
+    .post-text {
+      margin-bottom: 1em;  
+    }
+    .post-media {
+      text-align: right;  
+      width: 39%; 
+    }
+  }
+  
+}
+
+// > 1600
+@media (min-width: $break-xl-screen) {
+
+  .content-banner-media {
+    .post-media {
+      flex: 1 0 auto;
+      .button-group {
+        justify-content: space-between;
+      }
+      [class^="btn-"] {
+        font-size: 1.135em;
+        flex: 1 0 auto;
+        margin-right: 0;
+        margin-left: .5em;   
+      }
+    }
+  }
+}

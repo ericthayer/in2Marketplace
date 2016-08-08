@@ -1,0 +1,10 @@
+.table-wrap {
+  @include tablesaw-stack(1000px);
+  overflow-x: scroll;
+  margin-bottom: 2em;     
+}
+
+// Modal Tables
+.modal-table-wrap {
+  @include tablesaw-stack(3000px);  
+}

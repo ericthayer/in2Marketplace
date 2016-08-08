@@ -1,0 +1,109 @@
+// * UTILITIES................................Components, Variables, Mixins 	
+// * .....Variables.........................Declarations of Sass variables
+// * ..........Breakpoints
+// * ..........Grid
+// * ..........Colors
+// * ..........Font Stacks
+// * ..........Global Helpers (text-shadow, transform, modifiers, etc.)
+// * .....Mixins.................................Sass mixins
+// * ..........Link States
+// * ..........Opacity
+// * ..........Text Modifications (reg mark, text-overflow, etc.)
+// * ..........Form & Table Resets
+// * ..........Content Blocks 
+// * ..........Image Styles 
+// * ..........Clearfix
+// * ..........Lazyload 
+
+// * BASE................................Set reset defaults
+// * .....Normalize
+// * .....Typography
+// * .....Global (e.g. html, body, .container styles)
+
+// * Vendor................................modified plugin styles
+// * .....lazysizes 2.0 - https://github.com/aFarkas/lazysizes/tree/2.0.0
+// * .....headroom.js v0.9.3 - http://wicky.nillia.ms/headroom.js
+// * .....collapsible - https://github.com/filamentgroup/collapsible
+
+
+
+
+// * LAYOUT................................Page & Template layout
+// * .....Global (body, containers)
+// * .....Main Content
+// * .....Main Nav
+// * .....Site Header
+// * .....Site Footer
+
+// * MODULES................................Scalable Web Parts
+// * .....Buttons
+// * .....Forms
+// * .....NavAuth login
+
+// * PAGES................................Page specific styles (directory not created by default)
+
+// * OVERRIDES................................Last resort to get a handle on the css (directory not created by default)
+
+
+// Utilities
+@import "utilities/variables";
+@import "utilities/mixins";
+
+// Global
+@import "base/normalize";
+@import "base/typography";
+@import "base/global";
+@import "modifiers/media/lazyload";
+
+// Vendor
+@import "vendor/remodal";
+@import "vendor/responsive-nav";
+@import "vendor/collapsible";
+@import "vendor/tablesaw";
+
+// Layout
+@import "layout/default/site-header";
+@import "layout/default/main-content";
+@import "layout/default/site-footer";
+
+// Modules
+@import "modules/UI/icons";
+@import "modules/UI/buttons";
+@import "modules/UI/admin-bar";
+@import "modules/UI/modal";
+@import "modules/UI/tables";
+
+@import "modules/navigation/base-nav";
+@import "modules/navigation/main-nav-v1";
+@import "modules/navigation/main-nav-v2";
+
+@import "modules/media/media-wrap";
+
+@import "modules/forms/forms";
+@import "modules/forms/contact-form";
+@import "modules/forms/search-form";
+
+// Modifiers
+
+@import "modifiers/utility/backgrounds";
+@import "modifiers/utility/borders";
+
+@import "modifiers/utility/margin";
+@import "modifiers/utility/padding";
+@import "modifiers/utility/text-formatting";
+
+@import "modifiers/media/image-styles";
+//@import "modifiers/media/caption-animations";
+
+@import "modifiers/layout/flex-layout";
+@import "modifiers/layout/flexbox";
+@import "modifiers/layout/layout-options";
+
+@import "modifiers/grids/flex-grid";
+@import "modifiers/grids/media-grid";
+@import "modifiers/grids/simple-grid";
+
+@import "modifiers/color/color-variables";
+@import "modifiers/color/color-specific/*";
+
+// Overrides

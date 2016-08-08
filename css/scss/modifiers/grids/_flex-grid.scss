@@ -1,0 +1,47 @@
+// Flex Grid
+
+.flex-grid {
+ @include clearfix;
+ display: flex;
+ flex-wrap: wrap;
+ 
+ > * {
+   float: left;   
+   flex-grow: 1;
+   margin: .25rem;
+   //padding: .25rem;  
+ }
+	
+}
+
+
+// Default Layout
+
+.l-flex-grid {
+   
+	// 480
+	@media (min-width: $break-375) {
+		
+		> * {
+  		width: 45%; 
+		}
+			
+	}
+	// > 540
+	@media (min-width: $break-md-phone) {
+  	
+  	> * {
+  		width: 31%; 
+		}
+  	
+	}
+	
+	// > 992
+	@media (min-width: $break-md-screen) {
+  	
+  	> * {
+  		width: 23%; 
+		}
+	}
+	
+}

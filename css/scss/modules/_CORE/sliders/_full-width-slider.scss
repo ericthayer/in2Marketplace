@@ -1,0 +1,37 @@
+.full-width-slider {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  .container { 
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;    
+  }
+  .hero-banner {
+    display: flex;
+    align-items: center;
+    height: 100%; 
+    padding-top: 5em;
+    padding-bottom: 5em;
+    .content-post {
+      padding-right: 2em;
+      padding-left: 2em;  
+    }
+  }  	
+	.gallery-cell { 
+	  width: 100%;
+	  margin-right: 0;
+	  img {
+  	  min-width: 100%;  
+	  }
+	}
+	// cell number
+	.gallery-cell:before {
+	  display: block;
+	  text-align: center;
+	  font-size: 80px;
+	  color: #FFF;
+	}
+	.flickity-page-dots {
+		bottom: -3em;	
+	}
+}

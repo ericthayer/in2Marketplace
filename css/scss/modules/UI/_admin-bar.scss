@@ -1,0 +1,119 @@
+// Admin Bar
+
+.admin-bar { 
+  .container-flex {
+
+  }
+  
+  .user-status,
+  .search-form {
+      
+  } 
+   
+}
+
+// User Status Message
+
+.user-status { 
+}
+
+// Avatar
+
+.avatar {
+  line-height: 0;   
+}
+
+.user-avatar {
+  border-radius: 50%;
+  border: 3px solid #FFF;
+  box-shadow: 0 0 0 2px #DDD;
+  min-height: 3rem;
+  min-width: 3rem;
+  max-width: 3.5rem;   
+  img {
+    
+  }
+  // > 480
+  @media (min-width: $break-sm-phone) {
+    max-width: 4.5rem;
+  } 
+} 
+
+.user-avatar,
+.user-status-text {
+  display: inline-block; 
+  vertical-align: middle;  
+}
+
+// Status Message
+
+.user-status-text {
+  font-size: .875rem;
+}
+
+.status-msg {
+  font-weight: bold;
+}
+
+// Profile Links
+
+.profile-links {
+  a {
+    font-size: .9em;
+    &:first-child{
+      padding-right: .35rem;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: underline; 
+    }  
+  }
+}
+
+// > 175
+@media (min-width: 13em) {
+  .user-avatar {
+    margin-right: .35rem;
+  }
+  .user-status-text {
+    text-align: left; 
+  }  
+}
+
+// < 320
+@media (max-width: $break-tiny-phone) {
+  .user-status {
+    margin-bottom: .5rem;
+    text-align: center;
+  }  
+  .user-avatar { 
+    margin-bottom: .35rem;
+  }
+  .user-status,
+  .header-search {
+    flex: 1 0 100%;
+    margin-right: auto;
+    margin-left: auto;  
+    width: 100%;     
+  }
+}
+
+
+// > 320
+@media (min-width: $break-tiny-phone) {
+  
+  .user-avatar {
+    margin-right: .75rem; 
+    margin-bottom: 0; 
+    //width: auto;  
+  }
+}
+
+// > 1200
+@media (min-width: $break-lg-screen) {
+  .admin-bar {
+    .user-status-text {
+   
+    }
+  }
+}

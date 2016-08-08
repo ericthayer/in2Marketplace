@@ -1,0 +1,28 @@
+.gallery {
+  // This helps w/ FOUC;
+  height: 0;   
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.flickity-enabled {
+  height: auto; 
+  opacity: 1;
+}
+
+.flickity-loaded {
+  .gallery-cell {
+    //height: 100%;
+  }
+}
+
+.content-slider {
+	padding-top: 2em;
+	padding-bottom: 2em;  
+}
+
+.gallery-cell {
+	img {
+		//min-width: 100%;	
+	}
+}

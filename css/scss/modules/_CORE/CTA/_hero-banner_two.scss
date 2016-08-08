@@ -1,0 +1,265 @@
+.hero-banner {
+  position: relative;
+  width: 100%;
+  .button-group {
+    align-items: center;
+    justify-content: center;
+    [class^="btn-"] {
+            
+    }
+    .btn-primary {
+      //@include button-cta; 
+    }
+    .btn-secondary {
+        
+    }    
+  }  
+  
+  // > 480
+  @media (min-width: $break-sm-phone) {
+    .button-group {
+      
+    }
+  }
+  // > 540
+  @media (min-width: $break-md-phone) {
+    .button-group {		
+  		flex-flow: row wrap;
+    	[class^="btn-"] {
+      	margin-bottom: 0;
+      	width: auto;
+    	}
+    }
+  }
+  // 667
+	@media (min-width: $break-ml-phone) {
+  	.no-js & {
+    	.button-group {		
+  		flex-flow: row wrap;
+      	[class^="btn-"] {
+        	margin-bottom: 0;
+        	width: auto;      
+        	&:nth-last-child(n+2), 
+          &:nth-last-child(n+2) ~ * {
+            &:first-child {
+            	margin-right: 0.5em;  
+          	}
+          	 &:last-child {
+            	margin-left: 0.5em;  
+          	}
+          }
+        }
+      }
+    } 	
+		.btn-txt {
+			width: 44%;	
+			&:nth-child(3n) {
+				margin-bottom: 0;	
+			}
+		}
+	} 
+}
+
+// Hero Content
+
+.container {
+  @include container;  
+  text-align: center;
+  transition: padding .4s ease;  
+  &:last-child {
+    margin-bottom: 0; 
+  } 
+}
+
+
+// Hero Text
+
+.post-wrap {
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  justify-content: center;
+}
+
+// Hero Headline
+.post-text {
+  font-size: 2em;
+  margin-right: auto;
+  margin-left: auto;  
+  width: 100%;  
+}
+
+// Hero Subtitle
+
+.post-subtitle {
+  
+}
+
+// Hero Description
+
+.post-text {
+  @include p-style;   
+}
+
+// Hero CTA
+
+.hero-cta {
+  .btn-hero {
+    margin: 0 0 1em;  
+  }
+  // > 667
+  @media (min-width: $break-ml-phone) {
+     .btn-hero {
+      margin: 0;  
+    }
+  }
+}
+
+// Media Banner
+
+.hero-banner-media {
+  position: relative;
+  .container {
+    position: relative;
+    z-index: 1;  
+  }
+  .post-media {
+    margin: 0 auto;
+    padding-bottom: 2em;
+    padding-bottom: 2rem;
+    position: relative;
+    z-index: 1;     
+  }
+  .container {
+    position: relative;
+    z-index: 1; 
+  }
+  &:after {
+    @include panel-bg-scale;
+    content: "";
+    position: absolute;
+    top: 0; 
+    height: 75%;
+    width: 100%;
+    z-index: 0;   
+  }
+}
+
+// Hero Content Image
+
+.hero-img {
+  // > 480
+  @media (min-width: $break-sm-phone) {
+    max-width: 30em;  
+  }
+}
+
+// CTA
+
+.hero-banner-cta {
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+  padding: 0; 
+  .container {
+    padding: 1.5em 3%;
+  }
+  .post-text {
+    margin-bottom: 0.5em; 
+    text-transform: none; 
+  }
+  .hero-img {
+    display: none; 
+  }
+  .helper-link {
+    margin-bottom: 0; 
+  }
+  .btn-hero {
+    max-width: 250px;  
+  }
+  // > 480
+  @media (min-width: $break-sm-phone) {
+    .container {
+ 
+    }
+    .post-text {
+      font-size: 1.65em;  
+    }
+    .hero-img {
+      display: inline-block;
+      margin-top: 1.5em;    
+    }
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-hero {
+      margin-bottom: 0; 
+    }
+    .helper-link {
+      font-size: .875em; 
+      padding: 0 1.5em;
+      text-align: left; 
+    }
+  }
+  // 568
+  @media (min-width: $break-md-phone) {
+    .post-text {
+      font-size: 2.25em;
+      margin-top: 0;
+    }
+  }
+  // > 667
+  @media (min-width: $break-ml-phone) {
+     .container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;  
+      padding-left: 0;
+    }
+    .post-wrap {
+      align-self: center;
+      padding-left: 2em;
+    }
+    .post-text {
+
+    }
+  }
+  // 768
+  @media (min-width: $break-lg-phone) {
+    .container {
+      flex-flow: row nowrap;
+      text-align: left;
+    }
+    .hero-img {
+      
+    }
+    .post-text {
+     padding: 0;  
+    }
+    .hero-cta {
+      justify-content: flex-start;
+      .helper-link {
+        text-align: left;
+      }
+    }
+  }
+  // > 1200
+  @media (min-width: $break-lg-screen) {
+    .hero-img {
+       
+    }
+  }
+  // 1600
+  @media (min-width: $break-xl-screen) {
+    .post-wrap {
+     
+    }
+    .hero-img {
+          
+    }
+  }
+}

@@ -1,0 +1,339 @@
+.calendar-list { 
+  .content-post {  
+  }
+  .post-content {  
+    margin-bottom: 0; 
+  }
+  .post-title {
+    padding-top: 0; 
+  }
+  .image-caption {
+    font-size: 1.5em;
+    font-weight: 700;
+    transition: all .4s ease;   
+  } 
+  figcaption {
+    background: rgba(darkRed, 0);
+    height: 100%; 
+    opacity: 1;
+    transition: background .4s ease;
+    &:hover {
+      //background: rgba(darkRed, 0.7);
+      //background: none;
+      .image-caption {
+        font-size: 1.25em; 
+        padding-top: 6em;
+        padding-left: 9em;  
+        //text-shadow: 2px 2px 0 #222;   
+      }
+    }
+  }   
+}
+
+.event-date {
+  background: darkRed;
+  display: flex;
+  color: #FFF;
+  font-size: 1.75em;
+  line-height: 1.1;  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 2em; 
+  text-align: center;
+  span {
+    display: block; 
+  }
+  // > 480
+  @media (min-width: $break-sm-phone) {
+    padding: 2em; 
+  } 
+}
+
+// Calendar List Teasers
+
+.calendar-list.teaser-posts {
+  .post-content {
+    font-size: .875em;
+  }
+  figcaption {
+    display: none;
+  }
+  [class^="btn-"] {
+    margin: 0;
+  }
+}
+
+
+// Event Expired
+
+.event-expired {
+  .image-caption {
+    color: #111;
+  }
+  .btn-register {
+    display: none;  
+  }
+  figcaption {
+    background: rgba(white, .85);
+    height: 100%; 
+       
+    &:after {
+    	background: rgba(darkRed, .95);
+    	color: #FFF;
+    	content: "Ended";
+    	font-size: .75em;
+      line-height: 30px;  
+    	letter-spacing: 1.5px;
+    	position: absolute;
+    	top: 10px;
+    	left: -60px; 
+    	width: 200px;
+    	text-align: center;  
+    	text-shadow: -1px -1px 0 rgba(black, .35); 
+    	text-transform: uppercase;
+    	transform: rotate(-35deg);
+    	transition: all .4s ease;
+    	z-index: 2;
+    }
+    &:hover {
+      .image-caption {
+       color: #FFF;
+      }
+      &:after {
+        background: rgba(black, .9);
+        top: 12px;
+        left: -65px;
+      }
+    }
+  }
+}
+
+// Event Details
+
+.event-details {  
+  position: relative;  
+}
+
+// Show/Hide/Register Buttons
+
+button.show-panel {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
+
+.button-label {
+  &:last-child {
+    display: none;
+  }
+}
+
+.panel-content {
+  display: none;  
+  max-height: 0;
+  opacity: 0; 
+  overflow: hidden;
+  transition: all .4s cubic-bezier(.0,0,.58,1);
+  p {
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0; 
+    }  
+  }
+  .map-link {
+    font-weight: bold;
+    padding-left: .5em;
+    text-align: center;     
+    text-transform: uppercase; 
+  }   
+}
+
+// Panel Open
+
+.panel-open {  
+  .button-label {
+    &:first-child {
+      display: none;  
+    }
+    &:last-child {
+      display: inline;
+    }
+  }       
+  .panel-content {
+    display: flex;
+    flex-flow: row wrap; 
+    padding-top: 1em;
+    max-height: 100%;
+    opacity: 1;   
+    overflow: visible;
+    .no-flexbox & {
+      display: block; 
+    }  
+  }     
+}
+
+// Event Content
+
+.event-location,
+.event-schedule,  
+.event-state,
+.event-recurring {
+  display: inline-block;
+  vertical-align: top;    
+} 
+.event-location,
+.event-schedule { 
+  width: 100%;
+}
+
+.event-location {
+  .label-wrap {
+    display: flex;
+    justify-content: space-between;
+    .no-flexbox & {
+      display: inline-block;
+      width: 100%;  
+    }
+  }
+  .map-link {
+    font-size: 80%;
+    font-weight: bold; 
+    text-transform: uppercase;
+    .icon {
+      font-size: 1.125em; 
+    } 
+  }
+}
+
+.event-schedule {
+  time span {
+    display: block; 
+  }
+  // > 375
+  @media (min-width: $break-tiny-phone + 3.438em) {
+    time span {
+      display: inline-block;
+      &:first-child {
+        padding-right: .25em;  
+      }
+      &:last-child {
+        padding-left: .25em; 
+      }
+    }
+  }
+  
+}
+
+
+// 320
+@media (min-width: $break-tiny-phone) {
+  .calendar-list {
+    .image-caption {
+      font-size: 1.875em; 
+    }
+    .show-panel,
+    .hide-panel,
+    .btn-register {
+      margin-right: .5em;  
+    }
+  }
+}
+
+// > 480
+@media (min-width: $break-sm-phone) {
+  .calendar-list {
+    .post-wrap {
+      flex-flow: row-reverse wrap;
+    }
+    .post-content {
+      flex: 1 0 auto; 
+      width: 70%;
+      .no-flexbox & {
+        display: inline-block;  
+      } 
+    }
+    .post-media {
+      flex: 1 0 auto;
+      margin-bottom: 0;
+      padding-right: 5%;
+      padding-left: 0;   
+      width: 30%;
+      .no-flexbox & {
+        float: left;
+      }  
+    }    
+  }
+}
+
+// 667
+@media (min-width: $break-ml-phone) {  
+  .calendar-list {
+    .event-schedule {
+      .event-label {
+    
+      }
+    }
+    .event-state,
+    .event-recurring {
+      margin-bottom: 0; 
+    }
+    .event-time.start,
+    .event-time.end {
+      display: inline-block;  
+      width: auto;  
+    }
+    .event-time.start {
+      padding-right: 1em; 
+    }
+  }
+  
+}
+
+// 992
+@media (min-width: $break-md-screen) {
+  .calendar-list {
+    .content-post {
+      padding-bottom: 4em;  
+    }
+    .post-content {
+      width: 75%;       
+    }
+    .post-media {
+      width: 25%; 
+    }
+    
+    // Teaser Posts
+    &.teaser-posts {
+      .content-post {
+        padding: 1.5em; 
+      }
+      .post-content {
+        padding-left: 15px; 
+        width: 65%; 
+      }
+      .post-media {
+        width: 35%; 
+      }
+    }
+    .event-location,
+    .event-schedule {
+      margin-bottom: 0; 
+    }
+    .event-location {
+      flex: 2 0 auto;
+      padding-right: 2em; 
+      width: 50%;
+    }
+    .event-schedule {
+      flex: 1 0 auto;
+      width: 45%;
+    }
+    .event-time.start {
+      padding-right: 2em; 
+    }
+    .event-status {
+      padding-top: 2em; 
+    }
+  }
+}

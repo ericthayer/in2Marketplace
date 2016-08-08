@@ -1,0 +1,142 @@
+.search-results {
+	padding-top: 1.5em;
+	padding-right: 1em; 
+  padding-left: 1em;
+	.title {
+		color: #EEE;
+		margin-bottom: 0.2em;	
+		text-transform: none;	
+		a {
+			color: #EEE;
+		}
+	}
+	p {
+		color: #EEE;
+	}
+	// 800
+	@media (min-width: 799px) {
+  	padding-right: 2.5em; 
+		padding-left: 2.5em;		
+	}	
+}
+
+.search-result {
+	border-bottom: 2px solid #DDD;
+	margin-bottom: 2em;
+	padding-bottom: 2.5em;
+	&:last-child {
+		border: none;
+	}		
+}  
+
+// Result Table
+
+.result-table {
+	font-size: 0.8em;	
+	width: 100%;
+	tr {
+		border: none;
+		&:last-child {
+			//border: none;
+			border-radius: 5px;
+		}
+		&:nth-child(even) {
+			td {
+				background-color: #E6E6E6;
+				&:first-child {
+				}
+			}
+		}
+		&:nth-child(6) {
+			th {
+				padding-left: 0;	
+			}
+		}
+	}
+	thead {
+		& > tr {
+			background: none !important;
+		}
+	}	
+	th,
+	td {
+		padding: 0.5em;
+		text-align: left;	
+	}
+	td {
+		background-color: #F4F4F4;
+		vertical-align: middle;
+		&:first-child {
+			//background: none;
+		}
+		&:nth-child(2) {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 0;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 0;
+		}
+		&:last-child {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 5px;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 5px;
+		}
+		// 768
+		@media (min-width: $break-lg-phone) {
+			&:nth-child(2) {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+			&:last-child {
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}		
+	}
+	.op-day {	
+		display: block;
+		&:last-child {
+			padding-top: 0.5em;	
+		}					
+	}
+	.tablesaw-cell-content {
+		padding-left: 1em;	
+	}
+	// 480
+	@media (min-width: $break-sm-phone) {
+		.op-day {
+			float: left;	
+			padding-right: 0.5em;
+			min-width: 75px;
+			&:last-child {
+				padding-top: 0;	
+			}		
+		}
+	}
+	// 799
+	@media (min-width: 799px) {
+		tr {
+			border-top: 4px solid white;
+			border-bottom: 4px solid white;
+		}
+		td {
+		
+		}
+		.tablesaw-cell-content {
+			padding-left: 0.313em;	
+		}	
+	}
+	
+  .tablesaw thead tr:first-child th:nth-child(6) {
+  	padding-left: 0.25em;	
+  }
+  
+  .tablesaw-stack tbody tr {
+  	border-bottom: none;
+  }
+}
+

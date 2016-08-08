@@ -1,0 +1,36 @@
+// Feature Posts
+
+.feature-post {
+  .post-content {
+    
+  }
+  .post-content,
+  .post-media {
+    display: inline-block;  
+  }
+}
+
+.feature-posts {  
+  @include post-grid;
+  .container {
+    justify-content: center;
+  }
+  width: 100%;  
+  .post-content {
+    padding-right: .125em;
+    padding-left: .125em;   
+  }
+  ul {
+    @include post-list;     
+    padding-left: 0;   
+    li {
+        
+    }
+  }   
+  .button-group {
+    
+    [class^="btn-"] {
+            
+    }
+  }
+}

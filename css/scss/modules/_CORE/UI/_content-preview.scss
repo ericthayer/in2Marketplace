@@ -1,0 +1,226 @@
+// Content Preview Wrapper
+
+.content-preview {
+  //position: relative;
+  //padding: 0; 
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  .post-wrap {
+    position: relative; 
+  } 
+  &.content-preview-open {
+    //position: static;
+    //z-index: 10000; 
+  }   
+}
+
+// Content Preview Popup
+
+// prevents html from scrolling when popup is open
+.no-scroll {
+  overflow: hidden;
+}
+
+
+.content-preview-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.4s;
+  z-index: 10001;
+  // Overlay
+  &:hover {
+    cursor: auto;
+    opacity: 1;     
+  }
+  &:before {
+    content: "";
+    border: 5px solid rgba(black , 0);
+    //background: rgba(black, 0.25);
+    //box-shadow: 0 0 50px rgba(black, 0.05) inset;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    transition: all 0.4s cubic-bezier(.03,.12,.6,.9);
+    z-index: 10003;
+  }
+}
+
+// CMS Button - opens CMS Window
+
+.content-preview-button,
+.content-preview-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center; 
+  //opacity: 0;
+  z-index: 10004; 
+  [class^="icon-"] {
+    color: white;
+    line-height: 0; 
+    &:before {
+      margin: 0;  
+    } 
+  } 
+}
+
+.content-preview-button {
+  background-color: tint(black, 25%);
+  opacity: 0;
+  height: 50px;
+  width: 50px;
+  transition: all 200ms cubic-bezier(.03,.12,.6,.9); 
+  [class^="icon-"] {
+    font-size: 0;
+    transition: font-size 500ms;
+    &:before {
+      line-height: 49px;
+    }  
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #DDD;
+    background-color: tint(black, 50%);
+    cursor: pointer; 
+  }  
+}
+
+.content-preview-close-button {
+  background-color: shade(#DDD, 70%);
+  //box-shadow: 0 0 100px rgba(black, 0.75) inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  width: 75px;
+  height: 4.688em;
+  width: 4.688em; 
+  margin: 0;
+  //padding: 1.5em;
+  [class^="icon-"] {
+    display: flex;
+    font-size: 2.125em;
+    line-height: 1; 
+    color: #CCC;
+    width: 1em; 
+    &:before {
+      //line-height: 0.6;
+    }
+  }
+  // Cancel
+  .icon-cancel-circled:before {
+    color: #CCC; 
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    cursor: pointer;
+    opacity: 0.85;
+  }     
+}
+
+// Content Preview Window
+
+.content-preview-window {
+  background-color: #DDD;
+  //background: rgba(black,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; 
+  opacity: 0;
+  transform: rotateX(90deg);
+  //transform: scale(2);
+  transition: transform 600ms cubic-bezier(.03,.12,.6,.9), opacity 0.4s;
+  transition-delay: 0;
+  z-index: 10000;
+  .no-scroll & {
+    overflow-y: auto !important;
+  }
+}
+
+.content-preview-editor {
+  //background: url("images/slider/slider-img-1.jpg") no-repeat center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .module-title {
+    color: white;
+  }
+  p {
+    color: white;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font: 3vh/1 $sans-serif;
+  } 
+}
+
+// Content Preview Active 
+ 
+.content-preview-popup { 
+  &:hover {   
+    opacity: 1;
+    &:before {
+      border: 5px solid rgba(black , 0.1);
+      opacity: 1;
+    }
+    .content-preview-button { 
+      padding: 0.25em;
+      opacity: 1;
+      top: 5px; 
+      right: 5px; 
+      height: 60px;
+      width: 60px; 
+      [class^="icon-"] {
+        font-size: 1.5em;
+      }
+    }  
+  }
+}
+
+.content-preview-open {
+  z-index: 10000;  
+  .content-preview-popup { 
+    opacity: 1;
+    &:before {
+      display: none;  
+    }  
+  }
+}
+
+.content-preview-open {
+  opacity: 1;
+  .content-preview-button {
+    display: none;
+    z-index: 10002; 
+  }
+  .content-preview-window {
+    transform: rotateX(0);
+    //transform: scale(1); 
+    top: 0; 
+    opacity: 1;
+    z-index: 10004;
+    .content-preview-close-button {
+      opacity: 1;
+      &:hover {
+       // opacity: 0.85;
+      }
+    }
+  }
+}

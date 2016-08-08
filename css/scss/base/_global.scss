@@ -1,0 +1,45 @@
+/* --- Global & Base Layout Styles --- */
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  
+}
+
+// Container Styles
+
+.container,
+.container-flex,
+.container-fluid {
+  margin: 0 auto;
+  //max-width: 75.00em;
+  width: 100%;  
+}
+
+.container,
+.container-fluid {	
+	padding-right: 1rem;
+  padding-left: 1rem;   	
+	// > 900
+	@media (min-width: $break-900) {
+  	padding-right: 2rem;
+  	padding-left: 2rem;   
+	}
+	// > 2000
+	@media (min-width: $break-xxl-screen) {
+  	padding-right: 3rem;
+  	padding-left: 3rem;  
+	}
+}
+
+.container-flex {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  // > 480
+  @media (min-width: $break-sm-phone) {
+    padding-right: 0;
+    padding-left: 0;  
+  }
+}

@@ -1,0 +1,236 @@
+// Text Manipulation
+
+.text-b {
+  text-weight: bold;   
+}
+
+.text-i {
+  text-style: italic; 
+}
+
+.text-u {
+  text-decoration: underline; 
+}
+
+.text-st {
+  text-decoration: line-through;
+}
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+.no-caps {
+  text-transform: lowercase;
+}
+
+
+//** ALIGNMENT (align-left by default) **//
+
+// Text Align Right
+
+.text-right {      
+  text-align: right;
+    
+  * + *:last-child {
+    margin-right: 0; 
+  }
+}
+
+// Text Align left
+
+.text-left {
+  text-align: left;
+  * + *:last-child {
+    margin-left: 0; 
+  }  
+}
+
+// Text Align Center
+
+.text-center {
+  text-align: center;  
+}
+
+
+//** FONT SIZE (1em by default) **//
+
+.text-tiny {
+  font-size: .75em; 
+}
+
+.text-sm {
+  font-size: .875em; 
+}
+
+.text-md {
+  font-size: 1.35em; 
+}
+
+.text-lg {
+  font-size: 1.5em; 
+}
+
+.text-xl {
+  font-size: 1.875em; 
+}
+
+// > 480
+@media (min-width: $break-sm-phone) {
+
+  // Text Align Right
+  
+  .sm-text-right {      
+    text-align: right;
+      
+    * + *:last-child {
+      margin-right: 0; 
+    }
+  }
+  
+  // Text Align left
+  
+  .sm-text-left {
+    text-align: left;
+    * + *:last-child {
+      margin-left: 0; 
+    }  
+  }
+  
+  // Text Align Center
+  
+  .sm-text-center {
+    text-align: center;  
+  }
+  
+  
+  //** FONT SIZE (1em by default) **//
+  
+  .sm-text-tiny {
+    font-size: .75em; 
+  }
+  
+  .sm-text-sm {
+    font-size: .875em; 
+  }
+  
+  .sm-text-md {
+    font-size: 1.35em; 
+  }
+  
+  .sm-text-lg {
+    font-size: 1.5em; 
+  }
+  
+  .sm-text-xl {
+    font-size: 1.875em; 
+  }
+
+}
+
+// > 768
+@media (min-width: $break-lg-phone) {
+
+  // Text Align Right
+  
+  .md-text-right {      
+    text-align: right;
+      
+    * + *:last-child {
+      margin-right: 0; 
+    }
+  }
+  
+  // Text Align left
+  
+  .md-text-left {
+    text-align: left;
+    * + *:last-child {
+      margin-left: 0; 
+    }  
+  }
+  
+  // Text Align Center
+  
+  .md-text-center {
+    text-align: center;  
+  }
+  
+  
+  //** FONT SIZE (1em by default) **//
+  
+  .md-text-tiny {
+    font-size: .75em; 
+  }
+  
+  .md-text-sm {
+    font-size: .875em; 
+  }
+  
+  .md-text-md {
+    font-size: 1.35em; 
+  }
+  
+  .md-text-lg {
+    font-size: 1.5em; 
+  }
+  
+  .md-text-xl {
+    font-size: 1.875em; 
+  }
+
+}
+
+
+// > 992
+@media (min-width: $break-md-screen) {
+
+  // Text Align Right
+  
+  .lg-text-right {      
+    text-align: right;
+      
+    * + *:last-child {
+      margin-right: 0; 
+    }
+  }
+  
+  // Text Align left
+  
+  .lg-text-left {
+    text-align: left;
+    * + *:last-child {
+      margin-left: 0; 
+    }  
+  }
+  
+  // Text Align Center
+  
+  .lg-text-center {
+    text-align: center;  
+  }
+  
+  
+  //** FONT SIZE (1em by default) **//
+  
+  .lg-text-tiny {
+    font-size: .75em; 
+  }
+  
+  .lg-text-sm {
+    font-size: .875em; 
+  }
+  
+  .lg-text-md {
+    font-size: 1.35em; 
+  }
+  
+  .lg-text-lg {
+    font-size: 1.5em; 
+  }
+  
+  .lg-text-xl {
+    font-size: 1.875em; 
+  }
+
+}

@@ -1,0 +1,72 @@
+.soc-media-icons {
+	align-self: center;
+	display: flex;
+	flex-flow: row wrap;
+	margin-right: auto;
+	margin-left: auto;   
+  a {
+    flex: 0 1 auto;
+    &:first-child {
+      .icon {
+        margin-left: 0; 
+      }
+    }
+  }
+	p {
+  	flex: 1 0 auto;
+  	margin-bottom: 0.5em;
+  	width: 100%;   
+	}
+	.icon {
+    height: 1.25em;
+    width: 1.25em;
+    margin: {
+      top: .125em;
+      right: .125em;
+      bottom: .125em;
+      left: .125em;
+    }   
+  }  
+  a {
+    font-size: 2em;
+    line-height: 1em;  
+  }  
+  p {     
+    margin-bottom: 0.25em; 
+    width: 100%;     
+  }
+  // > 320
+  @media (min-width: $break-tiny-phone) {
+    p {
+      padding-right: 1em;  
+      width: auto;    
+    }
+    a {
+      display: inline-block;
+      vertical-align: middle;   
+    }
+  }
+  // 480
+  @media (min-width: $break-tiny-phone) {
+    .icon {
+      margin-top: 0;
+      margin-bottom: 0;
+      &:first-child {
+        margin-left: 0;
+      }  
+    }    
+  } 
+  // 768
+  @media (min-width: $break-lg-phone) {   
+    p {
+      font-size: 8.75em;
+      margin-bottom: .5em;    
+      vertical-align: middle;   
+    }  
+  }
+  
+  // fallbacks
+  .no-flexbox & {
+    display: inline-block;    
+  }
+}

@@ -1,0 +1,64 @@
+// CTA Row
+
+.cta-row {
+  .post-wrap {  
+    @include no-flexbox;      
+  }
+  .content-post {
+    display: block;    
+  }
+
+  // fallback
+  .no-flexbox & {
+    .post-media,
+    .post-content {
+      vertical-align: middle; 
+    }
+    .content-post {
+      &:nth-child(2) {
+        .post-media {
+          @include clearfix;
+        }
+      }  
+    } 
+    // 667
+    @media (min-width: $break-ml-phone) {
+      .content-post {
+        .post-content {
+          padding-right: 1.25em;  
+          padding-left: 0;  
+        }
+        &:nth-child(2) {
+          .post-media {
+            float: left; 
+          }
+          .post-content {
+            padding-right: 0;
+            padding-bottom: 0;    
+          }
+        }  
+      }   
+      .post-media,
+      .post-content {
+        vertical-align: middle; 
+        width: 48%; 
+      }
+    }
+    
+    // ** theme ** //
+    // layout set in theme.css @ 768
+    
+    
+    // 900
+    @media (min-width: $break-900) {
+      .content-post {
+        &:nth-child(2) {
+          .post-content {
+            padding-top: 2em;
+          }
+        }
+      } 
+    }
+  }
+  
+}

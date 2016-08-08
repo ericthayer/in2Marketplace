@@ -1,0 +1,76 @@
+// Contact Banner
+
+.contact-banner {
+  width: 100%;    
+  .contact-info {
+    @include container;
+    .site-footer & {
+      padding-right: 0;
+      padding-left: 0;  
+    }   
+  }
+  address {
+    line-height: 1.5;
+    h2 {
+      padding-top: 0; 
+    }   
+  }
+  .soc-media-icons {
+    position: relative;
+    bottom: auto;
+    padding-top: 0;   
+    padding-bottom: 0;
+  } 
+  // 600
+  @media (min-width: 600px) {
+    .contact-info {
+      display: flex;
+      align-items: center;  
+      width: 100%;
+      address {
+        padding-bottom: 0;  
+      }  
+    }
+    address {
+      flex: 1 0 auto;
+      text-align: left;    
+    }
+    .soc-media-icons {
+      flex: 0 1 auto;
+      width: auto;   
+    }
+  }
+  // > 2000
+  @media (min-width: $break-xxl-screen) {
+  	padding-top: 1.25em;
+  	padding-bottom: 1.25em; 
+	}
+	
+	// fallbacks
+	
+	.no-flexbox & {
+  	address,
+  	.soc-media-icons {
+    	text-align: center; 
+    	width: 100%;  
+  	}
+  	// 768
+  	@media (min-width: $break-lg-phone) {
+    	address,
+    	.soc-media-icons {
+      	text-align: left; 
+      	width: auto;    
+    	}
+    	address {
+      	float: left;
+      	width: auto;   
+    	}
+    	.soc-media-icons {
+      	float: right;
+      	padding-top: 16px;  
+      	width: auto;   
+    	}
+  	}
+	}
+	 
+}

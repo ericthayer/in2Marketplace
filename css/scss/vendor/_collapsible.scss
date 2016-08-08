@@ -1,0 +1,21 @@
+// Collapsible plugin
+
+.collapsible {
+
+  &:hover {
+    cursor: pointer;
+  }
+  
+}
+
+.collapsible-content {
+  & > :last-child {
+    margin-bottom: 0; 
+  }
+}
+
+
+.collapsible-collapsed .collapsible-content,
+.collapsible-enhanced.collapsible-collapsed .collapsible-content {
+	display: none;  
+}

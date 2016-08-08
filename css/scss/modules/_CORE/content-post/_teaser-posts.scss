@@ -1,0 +1,118 @@
+.teaser-posts {
+  padding-top: 2em;
+  padding-bottom: 2em;  
+  .module-description {
+    margin-bottom: 2.5em;  
+    text-align: center; 
+  }
+  .content-post {
+    padding-bottom: 2em;      
+  }
+  .post-wrap {
+    @include clearfix;
+    display: table;
+    vertical-align: top;      
+  }
+  .post-content {
+    display: table-footer-group;  
+    vertical-align: top;
+  }
+  .post-title {
+    font-size: 1.5em; 
+  }
+  .post-subtitle {
+    font-size: 1.25em; 
+  }
+  .post-text {
+    line-height: 1.3; 
+  }
+  .post-media {
+    figure {
+      margin-right: 0;
+      margin-left: 0;
+      text-align: left;   
+    }
+    img {
+      //max-width: 10em;  
+    }
+  }
+  .button-group {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  [class^="btn-"] {
+    font-size: .75em;
+    padding-right: 1em;
+    padding-left: 1em;  
+    width: auto;   
+  }  
+}
+
+// > 320
+@media (min-width: $break-tiny-phone) {
+  .teaser-posts {
+    .content-post {
+      text-align: left;
+    }
+    .post-wrap {
+      display: inline-block;  
+    }
+    .post-content {
+      display: inline-block;   
+      text-align: left;   
+      width: 64%; 
+    }
+    .post-media {
+      float: left;  
+      margin-bottom: 0; 
+      padding-top: .25em;
+      padding-right: 5%;       
+      width: 35%;
+      img {
+        max-width: 100%;  
+      } 
+    }
+    .button-group {
+      justify-content: flex-start;
+    }
+  }
+}
+
+// > 540
+@media (min-width: $break-md-phone) {
+  .teaser-posts {
+    .content-post {
+      padding-top: .75em;       
+      padding-right: .5em;
+      padding-bottom: 1.75em;
+      padding-left: .5em;  
+      vertical-align: top;       
+      width: 49%;
+    }
+    .post-title {
+      font-size: 1.35em; 
+    }
+    .post-subtitle {
+      font-size: 1.1em; 
+    }
+  }
+}
+
+// 768
+@media (min-width: $break-lg-phone) {
+  .teaser-posts {
+    .content-post {  
+      width: 32%;
+    }
+    .post-content {
+      
+    }
+  }
+} 
+
+// 992
+@media (min-width: $break-md-screen) {
+  .teaser-posts  {
+  
+  }
+}

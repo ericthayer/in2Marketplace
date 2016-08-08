@@ -1,0 +1,121 @@
+.calendar-detail {
+  padding-top: 2em;
+  padding-bottom: 2em;  
+  .image-caption {
+    font-size: 1.125em;  
+  }
+  .post-media figure {
+    margin-bottom: 1em;  
+  }
+  .btn-sm {
+    font-size: 1.25em;
+    // 480
+    @media (min-width: $break-sm-phone) {
+      //margin-right: 0.75em; 
+    }   
+  }
+  // > 667
+  @media (min-width: $break-ml-phone) {
+    .btn-sm {
+      font-size: 1em;  
+    }
+  }
+  // 900
+  @media (min-width: $break-900) {
+    .btn-sm {
+      font-size: 1.25em;
+    }
+  }
+}
+
+// Media Buttons
+
+.media-buttons {
+  display: inline-block;
+  width: 100%;
+  button {
+    display: inline-block; 
+    margin-bottom: 0; 
+    width: 100%;
+    &:first-child {
+      margin-bottom: 0.75em; 
+    }   
+  }
+  // > 320
+  @media (min-width: $break-tiny-phone) {
+    button { 
+      width: 49%;
+      &:first-child {
+        margin-right: 1%;
+        margin-bottom: 0;  
+      }
+      &:last-child {
+        margin-left: 1%;  
+      }   
+    }
+  }  
+}
+
+// Event Time
+
+.event-time {
+  display: block;
+  margin-bottom: 1em;
+  &:last-child {
+    margin-bottom: 0; 
+  }  
+}
+
+// Event Date
+
+.event-date {
+  margin-bottom: 0; 
+}
+
+// Event Label
+
+.event-label {
+  display: block;
+  font-size: 0.938em; 
+  font-weight: 700;
+  margin-bottom: 0.25em; 
+  text-transform: uppercase;    
+}
+
+// Event Location
+
+.event-address,
+.event-time time {
+  font-size: 1.125em; 
+}
+
+.event-address {
+  display: inline-block;
+  width: 100%;  
+}
+
+// Event Schedule
+
+.event-schedule a,
+.event-location a {
+  text-decoration: none;  
+}
+
+.event-scheduled,
+.event-ended,
+.event-occurs {
+  display: block;
+  padding-top: 0.25em;    
+}
+
+
+// Event Status
+
+.event-status {
+  p {
+    font-size: 1em; 
+  }
+ span {  
+    text-transform: uppercase;
+  }
+}

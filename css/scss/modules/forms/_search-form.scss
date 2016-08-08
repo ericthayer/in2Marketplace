@@ -1,0 +1,25 @@
+// Search Form
+
+.search-form {
+  max-width: 10em;
+}
+
+// search bar
+
+.search-bar {
+  @include clearfix;
+  input {
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+    float: left;  
+    width: 75%;  
+  }
+  button {
+    border-radius: 0 3px 3px 0;
+    float: left;  
+    margin-bottom: 0;
+    padding: 0;  
+    width: 25%;
+    text-align: center;   
+  }
+}

@@ -1,0 +1,77 @@
+.searchBox,
+.search-bar {
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;  
+  .flexbox & {
+    display: flex;
+  }
+  
+  // inputs
+  input,
+	input[type="text"],
+	input[type="search"] {
+		border-radius: 0;
+		border-right: none;
+		color: #222;
+		display: inline-block;
+		height: 36px; 
+		margin-bottom: 0;
+		vertical-align: middle; 
+		width: 80%;
+		-webkit-appearance: none;			
+	}
+	
+	// submit button
+	input[type="submit"] {
+  	background: url("../images/UI/icon-search-dark.svg") no-repeat center #CCC;
+  	background-size: 35%;
+  	border-radius: 0;
+  	color: inherit;
+    display: inline-block;
+  	font: {
+  		weight: normal;
+  		size: 16px;
+    }
+    line-height: 1.2;
+  	height: 36px; 
+    width: 20%; 
+  	padding: 0;
+  	text-shadow: none;
+  	vertical-align: middle; 
+  	@include hide-text;
+  	.no-flexbox & {
+  		float: right; 
+		} 
+	}
+	
+	// 480
+	@media (min-width: $break-tiny-phone) {
+		max-width: 300px;
+		
+		input[type="text"],
+  	input[type="search"] {
+    	 
+  	}
+  	
+  	input[type="submit"] {
+    	
+  	}
+  	
+	}
+	
+	// > 540
+	@media (min-width: $break-md-phone) {
+  	
+  	input[type="text"],
+  	input[type="search"] {
+    	width: 75%;  
+  	}
+  	
+  	input[type="submit"] {
+    	width: 25%; 
+  	}
+  	
+	}
+}

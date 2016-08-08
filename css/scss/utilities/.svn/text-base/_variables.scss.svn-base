@@ -1,0 +1,115 @@
+// Media Queries
+
+$grid-gutter-width: 30px; // gutter width
+
+$grid-columns: 12; // columns
+
+$break-tiny-phone: 320px;
+ 
+$break-sm-phone: 480px;
+
+$break-md-phone: 540px;
+
+$break-ml-phone: 667px;
+
+$break-lg-phone: 768px;
+
+$break-800: 800px;
+
+$break-900: 900px; 
+
+$break-md-screen: 992px;
+
+$break-lg-screen: 1200px; 
+
+$break-xl-screen: 1600px;
+
+$break-xxl-screen: 2000px;
+
+$break-widescreen: 2400px; 
+
+// Brand Green
+
+$green-light: #20BDBE;
+$green-med: #01A490;
+$green-dark: #006B6B;
+
+// Brand Blue
+
+$blue-light: #77b9dd;
+$blue-med: #2590c8;
+$blue-dark: #1B8DC8;
+
+// Brand Purple
+
+$purple-light: #C6168D;
+$purple-med: #92278F;
+$purple-dark: #5C2E91;
+
+// Brand Red
+
+$red-light: #F15922;
+$red-med: #ED1C24;
+$red-dark: #A92B31;
+
+// Brand Orange
+
+$orange-light: #FCAF17;
+$orange-med: #F47920;
+$orange-dark: #DD5828;
+
+// Brand Gray
+
+$brand-gray: #5b5b5b;
+$brand-gray-light: #999;
+$brand-black: #222;
+
+// Buttons 
+
+$btn-primary: #1ab66b;
+
+// Global Colors
+
+$body-color: #444;
+
+$warning-red: #a02626;
+
+$primary-color: #114582;
+
+$secondary-color: #1861b6;
+
+$link: $blue-med;
+
+$link-highlight: $blue-dark;
+
+$red-label-bg: #9b4242;
+
+// Generic
+
+$Helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Body
+
+$OpenSans: 'Open Sans', $Helvetica;
+
+// Headers & Titles
+
+$Montserrat: 'Montserrat', $Helvetica;
+
+$OpenSansCondensed: 'Open Sans Condensed', $Helvetica;
+
+// Icons
+
+$font-icon: "fontello";
+
+// Specific Helpers
+
+$wht-text-shadow: 0 1px 0 rgba(white, 0.35);
+
+$blk-text-shadow: 1px 1px 0 rgba(black, 0.15);
+
+$blk-text-shadow-neg: 0 -1px 1px rgba(black, 0.2);
+
+// Border Styles
+
+$border-dotted: 2px dotted #CCC;

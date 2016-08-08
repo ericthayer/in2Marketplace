@@ -1,0 +1,30 @@
+.video-CTA {
+  padding-top: 2em;
+  padding-bottom: 2em;  
+  .content-post {
+    text-align: center; 
+  }
+  .post-media {
+    margin: 0 auto;
+    width: 100%;
+	}
+	// 667
+	@media (min-width: $break-ml-phone) {    
+  	.post-content {
+    	align-self: center;
+    	text-align: center;
+      width: 40%;   
+    }
+    .post-media {
+      display: inline-block;
+      width: 60%; 
+    }
+	}
+	// 1200
+	@media (min-width: $break-lg-screen) {
+    .post-text {
+      padding-right: 1.5em;
+      padding-left: 1.5em;  
+    }
+	} 
+}

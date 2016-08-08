@@ -1,0 +1,112 @@
+.hero-banner {
+  position: relative;
+  width: 100%;
+  
+  // Hero Container
+
+  .container {  
+    &:last-child {
+      margin-bottom: 0; 
+    } 
+  }
+  
+  // Hero Title
+  
+  .post-title {
+    margin-right: auto;
+    margin-left: auto;  
+    width: 100%;  
+  }
+  
+  // Hero Buttons
+  
+  .button-group {
+    //padding-top: 1em; 
+  }
+  
+  // > 540
+  @media (min-width: $break-md-phone) {
+    .button-group {		
+  		flex-flow: row wrap;
+    	[class^="btn-"] {
+      	margin-bottom: 0;
+      	width: auto;
+    	}
+    }
+  }
+  
+  // 667
+	@media (min-width: $break-ml-phone) {
+  	.no-js & {
+    	.button-group {		
+  		flex-flow: row wrap;
+      	[class^="btn-"] {
+        	margin-bottom: 0;
+        	width: auto;      
+        	&:nth-last-child(n+2), 
+          &:nth-last-child(n+2) ~ * {
+            &:first-child {
+            	margin-right: 0.5em;  
+          	}
+          	 &:last-child {
+            	margin-left: 0.5em;  
+          	}
+          }
+        }
+      }
+    } 	
+		.btn-txt {
+			width: 44%;	
+			&:nth-child(3n) {
+				margin-bottom: 0;	
+			}
+		}
+	}
+	
+	 
+}
+
+// Hero CTA
+
+.hero-cta {
+  .btn-hero {
+    margin: 0 0 1em;  
+  }
+  // > 667
+  @media (min-width: $break-ml-phone) {
+     .btn-hero {
+      margin: 0;  
+    }
+  }
+}
+
+// Media Banner
+
+.hero-banner-media {
+  position: relative;
+  .container {
+    position: relative;
+    z-index: 1;  
+  }
+  .post-media {
+    display: block; 
+    margin: 0 auto;
+    padding-bottom: 2em;
+    padding-bottom: 2rem;
+    position: relative;
+    z-index: 1;     
+  }
+  .container {
+    position: relative;
+    z-index: 1; 
+  }
+  &:after {
+    @include panel-bg-scale;
+    content: "";
+    position: absolute;
+    top: 0; 
+    height: 75%;
+    width: 100%;
+    z-index: 0;   
+  }
+}

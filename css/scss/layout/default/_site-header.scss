@@ -1,0 +1,61 @@
+// Site Header
+
+.site-header {  
+  //margin-bottom: 1rem;
+  // > 667
+  @media (min-width: $break-ml-phone) {
+    //margin-bottom: 2rem;  
+  }  
+}
+
+
+// Site Title
+
+.site-title {
+  display: block;  
+  font-size: 1rem; 
+  line-height: 0;
+  margin-right: auto;
+  margin-left: auto;   
+  margin-bottom: 0;
+  text-align: center;
+  max-width: 7.5em;
+  width: 100%;
+  a {
+    display: block;  
+  }   
+  img {
+    //max-width: 10em;  
+  }   
+}
+
+// Logo
+
+.header-logo {
+  img {
+    //margin: 0 auto;
+  }  
+}
+
+// for IE > 992
+//@media (min-width: $break-md-screen) {
+  //@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    //.site-header {
+      //height: 100px;  
+    //}
+    //.site-title {
+      //flex-grow: 1;
+    //}
+    //.main-logo {
+      //min-width: 0;
+      //max-width: 275px;
+      //width: 100%;    
+    //}
+    //.main-nav {
+      //flex-grow: 3;
+      //> a {
+        //height: 100%; 
+      //}
+    //}
+  //}
+//}
